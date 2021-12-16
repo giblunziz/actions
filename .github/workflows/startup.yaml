@@ -1,0 +1,12 @@
+name: "Display info"
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+jobs:
+  start-up:
+    runs-on: linux
+    steps:
+      - run: echo "Deploying new version ${{ inputs.version }}"
